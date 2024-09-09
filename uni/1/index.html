@@ -1,220 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ссылки и Формы</title>
-    <style>
-      img {
-        border-radius: 30px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <h1>Очень полезные ссылки</h1>
-    <ul>
-      <!-- 1 -->
-      <li>
-        <a href="http://kubsu.ru">Мой университет</a>
-      </li>
-      <!-- 2 -->
-      <li>
-        <a href="https://kubsu.ru">Мой университет (защищенная ссылка)</a>
-      </li>
-      <!-- 3 -->
-      <li>
-        <a href="./image.jpg"><img src="./image.jpg" alt="Изображение" /></a>
-      </li>
-      <!-- 4 -->
-      <li>
-        <a href="/uni/1/form.html">Никуда</a>
-      </li>
-      <!-- 5 -->
-      <li>
-        <a href="/">Главная страница</a>
-      </li>
-      <!-- 6 -->
-      <li>
-        <a href="#form">Перейти к форме</a>
-      </li>
-      <!-- 7 -->
-      <li>
-        <a href="https://example.com?a=1&b=3&c=4">3 параметра</a>
-      </li>
-      <!-- 8 -->
-      <li>
-        <a href="https://example.com?id=3">Перейти к какому-то ID</a>
-      </li>
-      <!-- 9 -->
-      <li>
-        <a href="./form.html">Относительная ссылка</a>
-      </li>
-      <!-- 10 -->
-      <li>
-        <a href="./about">О нас</a>
-      </li>
-      <!-- 11 -->
-      <li>
-        <a href="../">Подняться вверх</a>
-      </li>
-      <!-- 12 -->
-      <li>
-        <a href="../../">Подняться вверх дважды</a>
-      </li>
-      <!-- 13 -->
-      <li>
-        <p>Эта <a href="./about">ссылка</a> ведет на страницу о нас</p>
-      </li>
-      <!-- 14 -->
-      <li><a href="https://linear.com#skip-nav">Самый крутой сайт</a></li>
-      <!-- 15 -->
-      <li>
-        <img
-          src="./planets.gif"
-          width="145"
-          height="126"
-          alt="Планеты"
-          usemap="#planetmap"
-        />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ссылки и Формы</title>
+  <style>
+    img {
+      border-radius: 30px;
+    }
+  </style>
+</head>
 
-        <map name="planetmap">
-          <area
-            shape="rect"
-            coords="0,0,82,126"
-            alt="Солнце"
-            href="https://linear.app"
-          />
-          <area
-            shape="circle"
-            coords="90,58,3"
-            alt="Меркурий"
-            href="https://linear.app"
-          />
-          <area
-            shape="circle"
-            coords="124,58,8"
-            alt="Венера"
-            href="https://linear.app"
-          />
-        </map>
-      </li>
-      <!-- 16 -->
-      <li>
-        <a href="">Пусто</a>
-      </li>
-      <!-- 17 -->
-      <li>
-        <a>Без href</a>
-      </li>
-      <!-- 18 -->
-      <li>
-        <a href="https://github.com/login" rel="nofolow">Здесь нет роботов</a>
-      </li>
-      <!-- 19 -->
-      <li>
-        <a href="https://github.com/signup" rel="noindex"
-          >Здесь тоже нет роботов</a
-        >
-      </li>
-      <!-- 21 -->
-      <li><a href="ftp://user:password@example.com">Перейти по FTP</a></li>
-    </ul>
+<body>
+  <h1>Очень полезные ссылки</h1>
+  <ul>
+    <!-- 1 -->
+    <li>
+      <a href="http://kubsu.ru">Мой университет</a>
+    </li>
+    <!-- 2 -->
+    <li>
+      <a href="https://kubsu.ru">Мой университет (защищенная ссылка)</a>
+    </li>
+    <!-- 3 -->
+    <li>
+      <a href="./image.jpg"><img src="./image.jpg" alt="Изображение"></a>
+    </li>
+    <!-- 4 -->
+    <li>
+      <a href="/uni/1/form.html">Никуда</a>
+    </li>
+    <!-- 5 -->
+    <li>
+      <a href="/">Главная страница</a>
+    </li>
+    <!-- 6 -->
+    <li>
+      <a href="#form">Перейти к форме</a>
+    </li>
+    <!-- 7 -->
+    <li>
+      <a href="https://example.com?a=1&b=3&c=4">3 параметра</a>
+    </li>
+    <!-- 8 -->
+    <li>
+      <a href="https://example.com?id=3">Перейти к какому-то ID</a>
+    </li>
+    <!-- 9 -->
+    <li>
+      <a href="./form.html">Относительная ссылка</a>
+    </li>
+    <!-- 10 -->
+    <li>
+      <a href="./about">О нас</a>
+    </li>
+    <!-- 11 -->
+    <li>
+      <a href="../">Подняться вверх</a>
+    </li>
+    <!-- 12 -->
+    <li>
+      <a href="../../">Подняться вверх дважды</a>
+    </li>
+    <!-- 13 -->
+    <li>
+      <p>Эта <a href="./about">ссылка</a> ведет на страницу о нас</p>
+    </li>
+    <!-- 14 -->
+    <li><a href="https://linear.com#skip-nav">Самый крутой сайт</a></li>
+    <!-- 15 -->
+    <li>
+      <img src="./planets.gif" width="145" height="126" alt="Планеты" usemap="#planetmap">
 
-    <h1>Лучшие сайты</h1>
-    <!-- 20 -->
-    <ol>
-      <li><a href="https://linear.com" title="Заголовок #1">Linear</a></li>
-      <li><a href="https://linear.com" title="Заголовок #2">Linear</a></li>
-      <li><a href="https://linear.com" title="Заголовок #3">Linear</a></li>
-    </ol>
+      <map name="planetmap">
+        <area shape="rect" coords="0,0,82,126" alt="Солнце" href="https://linear.app">
+        <area shape="circle" coords="90,58,3" alt="Меркурий" href="https://linear.app">
+        <area shape="circle" coords="124,58,8" alt="Венера" href="https://linear.app">
+      </map>
+    </li>
+    <!-- 16 -->
+    <li>
+      <a href="">Пусто</a>
+    </li>
+    <!-- 17 -->
+    <li>
+      <a>Без href</a>
+    </li>
+    <!-- 18 -->
+    <li>
+      <a href="https://github.com/login" rel="nofolow">Здесь нет роботов</a>
+    </li>
+    <!-- 19 -->
+    <li>
+      <a href="https://github.com/signup" rel="noindex">Здесь тоже нет роботов</a>
+    </li>
+    <!-- 21 -->
+    <li><a href="ftp://user:password@example.com">Перейти по FTP</a></li>
+  </ul>
 
-    <h1>Расскажите о себе</h1>
-    <form id="form">
-      <label>
-        ФИО
-        <inputtype
-          ="text"
-          name="fullname"
-          id="fullname"
-          placeholder="Ваше полное имя"
-        />
-      </label>
-      <br />
+  <h1>Лучшие сайты</h1>
+  <!-- 20 -->
+  <ol>
+    <li><a href="https://linear.com" title="Linear first place">Linear</a></li>
+    <li><a href="https://linear.com" title="Linear second place">Linear</a></li>
+    <li><a href="https://linear.com" title="Linear third place">Linear</a></li>
+  </ol>
 
-      <label>
-        Телефон
-        <input type="tel" name="phone" id="phone" placeholder="Ваш телефон" />
-      </label>
-      <br />
+  <h1>Расскажите о себе</h1>
+  <form id="form">
+    <label>
+      ФИО
+      <input type="text" name="fullname" id="fullname" placeholder="Ваше полное имя">
+    </label>
+    <br>
 
-      <label>
-        Электронная почта
-        <input type="email" name="email" id="email" placeholder="Ваш email" />
-      </label>
-      <br />
+    <label>
+      Телефон
+      <input type="tel" name="phone" id="phone" placeholder="Ваш телефон">
+    </label>
+    <br>
 
-      <label>
-        Дата рождения
-        <input
-          type="date"
-          name="birthday"
-          id="birthday"
-          placeholder="Дата рождения"
-        />
-      </label>
-      <br />
+    <label>
+      Электронная почта
+      <input type="email" name="email" id="email" placeholder="Ваш email">
+    </label>
+    <br>
 
-      <span>Пол</span>
-      <br />
+    <label>
+      Дата рождения
+      <input type="date" name="birthday" id="birthday">
+    </label>
+    <br>
 
-      <label>
-        <input type="radio" name="gender" value="male" />
-        Мужской
-      </label>
-      <br />
+    <span>Пол</span>
+    <br>
 
-      <label>
-        <input type="radio" name="gender" value="female" />
-        Женский
-      </label>
-      <br />
+    <label>
+      <input type="radio" name="gender" value="male">
+      Мужской
+    </label>
+    <br>
 
-      <label>
-        Ваш любимый язык программирования
-        <select id="favLang" name="fav_prog_lang">
-          <option value="pascal">Pascal</option>
-          <option value="c">C</option>
-          <option value="cpp">C++</option>
-          <option value="javascript">JavaScript</option>
-          <option value="php">PHP</option>
-          <option value="python">Python</option>
-          <option value="java">Java</option>
-          <option value="haskell">Haskell</option>
-          <option value="clojure">Clojure</option>
-          <option value="prolog">Prolog</option>
-          <option value="scala">Scala</option>
-        </select>
-      </label>
-      <br />
+    <label>
+      <input type="radio" name="gender" value="female">
+      Женский
+    </label>
+    <br>
 
-      <label>
-        Биография
-        <textarea
-          name="bio"
-          id="bio"
-          placeholder="Расскажите о себе"
-        ></textarea>
-      </label>
-      <br />
+    <label>
+      Ваш любимый язык программирования
+      <select id="favLang" name="fav_prog_lang">
+        <option value="pascal">Pascal</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="javascript">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="haskell">Haskell</option>
+        <option value="clojure">Clojure</option>
+        <option value="prolog">Prolog</option>
+        <option value="scala">Scala</option>
+      </select>
+    </label>
+    <br>
 
-      <label>
-        <input type="checkbox" name="agreed" id="agreed" />
-        С контрактом ознакомлен
-      </label>
-      <br />
+    <label>
+      Биография
+      <textarea name="bio" id="bio" placeholder="Расскажите о себе"></textarea>
+    </label>
+    <br>
 
-      <button type="submit">Сохранить</button>
-    </form>
-  </body>
+    <label>
+      <input type="checkbox" name="agreed" id="agreed">
+      С контрактом ознакомлен
+    </label>
+    <br>
+
+    <button type="submit">Сохранить</button>
+  </form>
+</body>
+
 </html>
