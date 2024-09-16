@@ -13,22 +13,27 @@ body {
 }
 
 header {
-  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid black;
 }
 
-header > div {
+.header-content {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 906px;
+  max-width: 960px;
+}
+
+.header-content > div {
+  display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-header > nav > a {
-  padding: 10px;
+.header-content > nav > a {
   color: black;
 }
 
