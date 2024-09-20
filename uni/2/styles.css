@@ -27,10 +27,19 @@ header {
   max-width: 960px;
 }
 
-.header-content > div {
+.header-content > .logo-wrapper {
   display: flex;
+  gap: 5px;
   flex-direction: row;
   align-items: center;
+}
+
+/* remove styles for <ul> inside of .header-content > nav */
+.header-content > nav > ul {
+  display: flex;
+  gap: 5px;
+  list-style-type: none;
+  overflow: hidden;
 }
 
 .header-content > nav > a {
