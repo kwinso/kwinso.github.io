@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 906px;
+  max-width: 960px;
+  padding: 0px 20px;
+}
+
+.header-content>.logo-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* remove styles for <ul> inside of .header-content > nav */
+.header-content>nav>ul {
+  padding: 0;
+  flex-direction: column;
+  display: flex;
+  justify-items: start;
+  gap: 5px;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.header-content>nav>a {
+  color: black;
+}
+
+.logo {
+  width: 30px;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 960px;
+  padding: 10px;
+  /* выравнивание по центру */
+  margin: 0 auto;
+}
+
+main>.useless {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+footer {
+  border-top: 1px solid black;
+  padding: 30px 10px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  main>.useless {
+    flex-direction: column-reverse;
+  }
+
+  .header-content {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .header-content>nav>ul {
+    flex-direction: row;
+  }
+}
