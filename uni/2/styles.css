@@ -23,11 +23,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 906px;
+  width: 960px;
   max-width: 960px;
 }
 
-.header-content > .logo-wrapper {
+.header-content>.logo-wrapper {
   display: flex;
   gap: 5px;
   flex-direction: row;
@@ -35,14 +35,14 @@ header {
 }
 
 /* remove styles for <ul> inside of .header-content > nav */
-.header-content > nav > ul {
+.header-content>nav>ul {
   display: flex;
   gap: 5px;
   list-style-type: none;
   overflow: hidden;
 }
 
-.header-content > nav > a {
+.header-content>nav>a {
   color: black;
 }
 
@@ -70,19 +70,23 @@ table {
   border-collapse: collapse;
   font-family: Arial, sans-serif;
 }
+
 th,
 td {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
 }
+
 th {
   background-color: #4caf50;
   color: white;
 }
+
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
 tr:nth-child(odd) {
   background-color: #ffffff;
 }
