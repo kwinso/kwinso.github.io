@@ -15,8 +15,9 @@
 <body>
   <!-- Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div id="header-content" class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+      <div class="col-lg-3"></div>
+      <div class="container-fluid col-lg-6">
         <a class="navbar-brand" href="#">
           <img src="./logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
           Linear
@@ -40,221 +41,227 @@
           </ul>
         </div>
       </div>
+      <div class="col-lg-3"></div>
     </nav>
   </header>
 
   <main class="my-3 container-fluid">
-    <div class="d-flex flex-column flex-md-column-reverse">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Username</th>
-            <th scope="col">Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            <th scope="row">1</th>
-            <td>John Doe</td>
-            <td>@johndoe</td>
-            <td>johndoe@example.com</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jane Smith</td>
-            <td>@janesmith</td>
-            <td>janesmith@example.com</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Michael Johnson</td>
-            <td>@michaelj</td>
-            <td>michaelj@example.com</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Emily Davis</td>
-            <td>@emilyd</td>
-            <td>emilyd@example.com</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="col-lg-3"></div>
+    <div class="container-fluid col-lg-6">
+      <div class="d-flex flex-column flex-md-column-reverse">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-active">
+              <th scope="row">1</th>
+              <td>John Doe</td>
+              <td>@johndoe</td>
+              <td>johndoe@example.com</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jane Smith</td>
+              <td>@janesmith</td>
+              <td>janesmith@example.com</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2" class="table-active">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Michael Johnson</td>
+              <td>@michaelj</td>
+              <td>michaelj@example.com</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Emily Davis</td>
+              <td>@emilyd</td>
+              <td>emilyd@example.com</td>
+            </tr>
+          </tbody>
+        </table>
 
 
-      <div class="links">
-        <h1>Очень полезные ссылки</h1>
-        <ul>
-          <!-- 1 -->
-          <li>
-            <a href="http://kubsu.ru">Мой университет</a>
-          </li>
-          <!-- 2 -->
-          <li>
-            <a href="https://kubsu.ru">Мой университет (защищенная ссылка)</a>
-          </li>
-          <!-- 3 -->
-          <li>
-            <a href="./image.jpg"><img src="./image.jpg" alt="Изображение"></a>
-          </li>
-          <!-- 4 -->
-          <li>
-            <a href="/uni/1/form.html">Никуда</a>
-          </li>
-          <!-- 5 -->
-          <li>
-            <a href="/">Главная страница</a>
-          </li>
-          <!-- 6 -->
-          <li>
-            <a href="#form">Перейти к форме</a>
-          </li>
-          <!-- 7 -->
-          <li>
-            <a href="https://example.com?a=1&b=3&c=4">3 параметра</a>
-          </li>
-          <!-- 8 -->
-          <li>
-            <a href="https://example.com?id=3">Перейти к какому-то ID</a>
-          </li>
-          <!-- 9 -->
-          <li>
-            <a href="./form.html">Относительная ссылка</a>
-          </li>
-          <!-- 10 -->
-          <li>
-            <a href="./about">О нас</a>
-          </li>
-          <!-- 11 -->
-          <li>
-            <a href="../somewhere.html">Подняться вверх</a>
-          </li>
-          <!-- 12 -->
-          <li>
-            <a href="../../somewhere.html">Подняться вверх дважды</a>
-          </li>
-          <!-- 13 -->
-          <li>
-            <span>Эта <a href="./about">ссылка</a> ведет на страницу о нас</span>
-          </li>
-          <!-- 14 -->
-          <li><a href="https://linear.com#skip-nav">Самый крутой сайт</a></li>
-          <!-- 15 -->
-          <li>
-            <img src="./planets.gif" width="145" height="126" alt="Планеты" usemap="#planetmap">
+        <div class="links">
+          <h1>Очень полезные ссылки</h1>
+          <ul>
+            <!-- 1 -->
+            <li>
+              <a href="http://kubsu.ru">Мой университет</a>
+            </li>
+            <!-- 2 -->
+            <li>
+              <a href="https://kubsu.ru">Мой университет (защищенная ссылка)</a>
+            </li>
+            <!-- 3 -->
+            <li>
+              <a href="./image.jpg"><img src="./image.jpg" alt="Изображение"></a>
+            </li>
+            <!-- 4 -->
+            <li>
+              <a href="/uni/1/form.html">Никуда</a>
+            </li>
+            <!-- 5 -->
+            <li>
+              <a href="/">Главная страница</a>
+            </li>
+            <!-- 6 -->
+            <li>
+              <a href="#form">Перейти к форме</a>
+            </li>
+            <!-- 7 -->
+            <li>
+              <a href="https://example.com?a=1&b=3&c=4">3 параметра</a>
+            </li>
+            <!-- 8 -->
+            <li>
+              <a href="https://example.com?id=3">Перейти к какому-то ID</a>
+            </li>
+            <!-- 9 -->
+            <li>
+              <a href="./form.html">Относительная ссылка</a>
+            </li>
+            <!-- 10 -->
+            <li>
+              <a href="./about">О нас</a>
+            </li>
+            <!-- 11 -->
+            <li>
+              <a href="../somewhere.html">Подняться вверх</a>
+            </li>
+            <!-- 12 -->
+            <li>
+              <a href="../../somewhere.html">Подняться вверх дважды</a>
+            </li>
+            <!-- 13 -->
+            <li>
+              <span>Эта <a href="./about">ссылка</a> ведет на страницу о нас</span>
+            </li>
+            <!-- 14 -->
+            <li><a href="https://linear.com#skip-nav">Самый крутой сайт</a></li>
+            <!-- 15 -->
+            <li>
+              <img src="./planets.gif" width="145" height="126" alt="Планеты" usemap="#planetmap">
 
-            <map name="planetmap">
-              <area shape="rect" coords="0,0,82,126" alt="Солнце" href="https://linear.app">
-              <area shape="circle" coords="90,58,3" alt="Меркурий" href="https://linear.app">
-              <area shape="circle" coords="124,58,8" alt="Венера" href="https://linear.app">
-            </map>
-          </li>
-          <!-- 16 -->
-          <li>
-            <a href="">Пусто</a>
-          </li>
-          <!-- 17 -->
-          <li>
-            <a>Без href</a>
-          </li>
-          <!-- 18 -->
-          <li>
-            <a href="https://github.com/login" rel="nofollow">Сюда роботам не ходить</a>
-          </li>
-          <!-- 19 -->
-          <li>
-            <a href="./about">Ссылка на страницу, которая не индексируется роботами</a>
-          </li>
-          <!-- 21 -->
-          <li><a href="ftp://user:password@example.com">Перейти по FTP</a></li>
-        </ul>
+              <map name="planetmap">
+                <area shape="rect" coords="0,0,82,126" alt="Солнце" href="https://linear.app">
+                <area shape="circle" coords="90,58,3" alt="Меркурий" href="https://linear.app">
+                <area shape="circle" coords="124,58,8" alt="Венера" href="https://linear.app">
+              </map>
+            </li>
+            <!-- 16 -->
+            <li>
+              <a href="">Пусто</a>
+            </li>
+            <!-- 17 -->
+            <li>
+              <a>Без href</a>
+            </li>
+            <!-- 18 -->
+            <li>
+              <a href="https://github.com/login" rel="nofollow">Сюда роботам не ходить</a>
+            </li>
+            <!-- 19 -->
+            <li>
+              <a href="./about">Ссылка на страницу, которая не индексируется роботами</a>
+            </li>
+            <!-- 21 -->
+            <li><a href="ftp://user:password@example.com">Перейти по FTP</a></li>
+          </ul>
 
+        </div>
+      </div>
+
+      <h1>Лучшие сайты</h1>
+      <!-- 20 -->
+      <ol>
+        <li><a href="https://linear.com" title="Linear first place">Linear</a></li>
+        <li><a href="https://linear.com" title="Linear second place">Linear</a></li>
+        <li><a href="https://linear.com" title="Linear third place">Linear</a></li>
+      </ol>
+
+      <div class="container mt-5">
+        <h1>Расскажите о себе</h1>
+        <form id="form">
+          <div class="mb-3">
+            <label for="fullname" class="form-label">ФИО</label>
+            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Ваше полное имя">
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Телефон</label>
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Ваш телефон">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Электронная почта</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Ваш email">
+          </div>
+
+          <div class="mb-3">
+            <label for="birthday" class="form-label">Дата рождения</label>
+            <input type="date" class="form-control" name="birthday" id="birthday">
+          </div>
+
+          <fieldset class="mb-3">
+            <legend class="col-form-label pt-0">Пол</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+              <label class="form-check-label" for="genderMale">Мужской</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+              <label class="form-check-label" for="genderFemale">Женский</label>
+            </div>
+          </fieldset>
+
+          <div class="mb-3">
+            <label for="favLang" class="form-label">Ваш любимый язык программирования</label>
+            <select id="favLang" name="fav_prog_lang" class="form-select">
+              <option value="pascal">Pascal</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="javascript">JavaScript</option>
+              <option value="php">PHP</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="haskell">Haskell</option>
+              <option value="clojure">Clojure</option>
+              <option value="prolog">Prolog</option>
+              <option value="scala">Scala</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="bio" class="form-label">Биография</label>
+            <textarea name="bio" id="bio" class="form-control" placeholder="Расскажите о себе"></textarea>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" name="agreed" id="agreed">
+            <label class="form-check-label" for="agreed">С контрактом ознакомлен</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
       </div>
     </div>
-
-    <h1>Лучшие сайты</h1>
-    <!-- 20 -->
-    <ol>
-      <li><a href="https://linear.com" title="Linear first place">Linear</a></li>
-      <li><a href="https://linear.com" title="Linear second place">Linear</a></li>
-      <li><a href="https://linear.com" title="Linear third place">Linear</a></li>
-    </ol>
-
-    <div class="container mt-5">
-      <h1>Расскажите о себе</h1>
-      <form id="form">
-        <div class="mb-3">
-          <label for="fullname" class="form-label">ФИО</label>
-          <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Ваше полное имя">
-        </div>
-
-        <div class="mb-3">
-          <label for="phone" class="form-label">Телефон</label>
-          <input type="tel" class="form-control" name="phone" id="phone" placeholder="Ваш телефон">
-        </div>
-
-        <div class="mb-3">
-          <label for="email" class="form-label">Электронная почта</label>
-          <input type="email" class="form-control" name="email" id="email" placeholder="Ваш email">
-        </div>
-
-        <div class="mb-3">
-          <label for="birthday" class="form-label">Дата рождения</label>
-          <input type="date" class="form-control" name="birthday" id="birthday">
-        </div>
-
-        <fieldset class="mb-3">
-          <legend class="col-form-label pt-0">Пол</legend>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
-            <label class="form-check-label" for="genderMale">Мужской</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
-            <label class="form-check-label" for="genderFemale">Женский</label>
-          </div>
-        </fieldset>
-
-        <div class="mb-3">
-          <label for="favLang" class="form-label">Ваш любимый язык программирования</label>
-          <select id="favLang" name="fav_prog_lang" class="form-select">
-            <option value="pascal">Pascal</option>
-            <option value="c">C</option>
-            <option value="cpp">C++</option>
-            <option value="javascript">JavaScript</option>
-            <option value="php">PHP</option>
-            <option value="python">Python</option>
-            <option value="java">Java</option>
-            <option value="haskell">Haskell</option>
-            <option value="clojure">Clojure</option>
-            <option value="prolog">Prolog</option>
-            <option value="scala">Scala</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="bio" class="form-label">Биография</label>
-          <textarea name="bio" id="bio" class="form-control" placeholder="Расскажите о себе"></textarea>
-        </div>
-
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" name="agreed" id="agreed">
-          <label class="form-check-label" for="agreed">С контрактом ознакомлен</label>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Сохранить</button>
-      </form>
-    </div>
+    <div class="col-lg-3"></div>
   </main>
 
   <footer class="d-flex justify-content-between align-items-center text-center bg-body-tertiary py-3 px-3">
-    <div class="container-fluid" id="footer-content">
+    <div class="col-lg-3"></div>
+    <div class="container-fluid col-lg-6">
       <div>
         <a class="btn btn-link btn-floating btn-lg text-body link-underline link-underline-opacity-0" target="_blank"
           href="https://github.com/kwinso/kwinso.github.io">
@@ -268,6 +275,7 @@
         <a class="text-body">Ruslan Sotnikov</a>
       </div>
     </div>
+    <div class="col-lg-3"></div>
   </footer>
 
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

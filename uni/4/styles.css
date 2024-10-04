@@ -5,9 +5,3 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
-
-#header-content,
-main,
-#footer-content {
-  max-width: 960px;
-}
