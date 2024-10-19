@@ -1,58 +1,60 @@
+/*jslint browser */
+
 function fetchProducts() {
     return [
         {
-            title: "MacBook Air",
-            cost: 2000
+            cost: 2000,
+            title: "MacBook Air"
         },
         {
+            cost: 2499,
             title: "MacBook Pro",
             variants: [
                 {
-                    title: "Gold edition",
-                    cost: 700
+                    cost: 700,
+                    title: "Gold edition"
                 },
                 {
-                    title: "Premium edition",
-                    cost: 1100
+                    cost: 1100,
+                    title: "Premium edition"
                 },
                 {
-                    title: "Ultimate edition",
-                    cost: 1500
-                }
-            ],
-            cost: 2499
-        },
-        {
-            title: "MacBook Pro 14-inch",
-            cost: 419,
-            features: [
-                {
-                    title: "MacBook Pro 14-inch - M1 Pro",
-                    cost: 169
+                    cost: 1500,
+                    title: "Ultimate edition"
                 }
             ]
         },
         {
-            title: "MacBook Pro 16-inch",
-            variants: [
+            cost: 419,
+            features: [
                 {
-                    title: "Ultra edition",
-                    cost: 500
-                },
-                {
-                    title: "Tim Cock edition",
-                    cost: 1000
+                    cost: 169,
+                    title: "MacBook Pro 14-inch - M1 Pro"
                 }
             ],
+            title: "MacBook Pro 14-inch"
+        },
+        {
             cost: 1999,
             features: [
                 {
-                    title: "16GB RAM Upgrade",
-                    cost: 449
+                    cost: 449,
+                    title: "16GB RAM Upgrade"
                 },
                 {
-                    title: "1TB SSD Upgrade",
-                    cost: 349
+                    cost: 349,
+                    title: "1TB SSD Upgrade"
+                }
+            ],
+            title: "MacBook Pro 16-inch",
+            variants: [
+                {
+                    cost: 500,
+                    title: "Ultra edition"
+                },
+                {
+                    cost: 1000,
+                    title: "Tim Cook edition"
                 }
             ]
         }
@@ -60,11 +62,12 @@ function fetchProducts() {
 }
 
 function addFeature(container, idx, feature) {
-    var labelElement = document.createElement("label");
+    let labelElement = document.createElement("label");
+    let checkbox = document.createElement("input");
+
     labelElement.setAttribute("for", "feature-" + idx);
     labelElement.textContent = feature.title;
 
-    var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.name = "feature-" + idx;
     checkbox.id = "feature-" + idx;
@@ -74,10 +77,10 @@ function addFeature(container, idx, feature) {
 }
 
 function displayFeatures(productIndex) {
-    var featureContainer = document.getElementById("features");
+    let featureContainer = document.getElementById("features");
+    let selectedProduct = fetchProducts()[productIndex];
     featureContainer.innerHTML = "";
 
-    var selectedProduct = fetchProducts()[productIndex];
     if (selectedProduct.features) {
         selectedProduct.features.forEach(function (feature, idx) {
             addFeature(featureContainer, idx, feature);
@@ -86,42 +89,52 @@ function displayFeatures(productIndex) {
 }
 
 function addVariant(container, idx, variant) {
-    var optionElement = document.createElement("option");
-    optionElement.value = idx;
+    let optionElement = document.createElement("option");
+    optionElement.value = (
+        Number.isNaN(idx)
+        ? ""
+        : idx
+    );
     optionElement.textContent = variant.title;
 
     container.appendChild(optionElement);
 }
 
 function displayVariants(productIndex) {
-    var variantContainer = document.getElementById("variants");
+    let variantContainer = document.getElementById("variants");
+    let selectElement = document.createElement("select");
+    let selectedProduct = fetchProducts()[productIndex];
     variantContainer.innerHTML = "";
 
-    var selectedProduct = fetchProducts()[productIndex];
     if (selectedProduct.variants) {
-        var selectElement = document.createElement("select");
         selectElement.name = "variant";
-        addVariant(selectElement, NaN, { title: "-", cost: 0 });
+
+        addVariant(selectElement, NaN, {
+            cost: 0,
+            title: "-"
+        });
 
         selectedProduct.variants.forEach(function (variant, idx) {
             addVariant(selectElement, idx, variant);
         });
+
         variantContainer.appendChild(selectElement);
     }
 }
 
 function handleProductSelection(event) {
-    var productIndex = parseInt(event.target.value, 10);
+    let productIndex = parseInt(event.target.value, 10);
     displayVariants(productIndex);
     displayFeatures(productIndex);
 }
 
 function addProduct(container, idx, product) {
-    var labelElement = document.createElement("label");
+    let labelElement = document.createElement("label");
+    let radioButton = document.createElement("input");
+
     labelElement.setAttribute("for", "product-" + idx);
     labelElement.textContent = product.title;
 
-    var radioButton = document.createElement("input");
     radioButton.type = "radio";
     radioButton.name = "product";
     radioButton.value = idx;
@@ -136,25 +149,38 @@ function isPositiveInteger(value) {
 }
 
 function computeTotal() {
-    var selectedProduct = document.querySelector("#products input[type=radio]:checked");
-    if (!selectedProduct) {
+    let selectedProductElem = document.querySelector(
+        "#products input[type=radio]:checked"
+    );
+    let totalPrice;
+    let sel;
+    let selectedVariant;
+    let quantity;
+    let output;
+    let selectedFeatures = document.querySelectorAll(
+        "#features input[type=checkbox]"
+    );
+
+    if (!selectedProductElem) {
         return;
     }
-    selectedProduct = fetchProducts()[parseInt(selectedProduct.value, 10)];
 
-    var totalPrice = selectedProduct.cost;
+    let selectedProduct = fetchProducts()[
+        parseInt(selectedProductElem.value, 10)
+    ];
+    totalPrice = selectedProduct.cost;
+
+    sel = document.querySelector("#variants select")?.value;
+    selectedVariant = parseInt(sel, 10);
+    quantity = document.getElementById("quantity").value;
+
     if (selectedProduct.variants) {
-        const sel = document.querySelector("#variants select")?.value;
-        if (sel) {
-            var selectedVariant = parseInt(sel, 10);
-            if (!isNaN(selectedVariant)) {
-                totalPrice += selectedProduct.variants[selectedVariant].cost;
-            }
+        if (sel && !Number.isNaN(selectedVariant)) {
+            totalPrice += selectedProduct.variants[selectedVariant].cost;
         }
     }
 
     if (selectedProduct.features) {
-        var selectedFeatures = document.querySelectorAll("#features input[type=checkbox]");
         selectedFeatures.forEach(function (feature, idx) {
             if (feature.checked) {
                 totalPrice += selectedProduct.features[idx].cost;
@@ -162,8 +188,6 @@ function computeTotal() {
         });
     }
 
-    var output;
-    var quantity = document.getElementById("quantity").value;
     if (!isPositiveInteger(quantity)) {
         output = "Please enter a valid positive integer!";
     } else {
@@ -174,12 +198,13 @@ function computeTotal() {
 }
 
 window.addEventListener("DOMContentLoaded", function () {
-    var productContainer = document.getElementById("products");
+    let productContainer = document.getElementById("products");
+
     fetchProducts().forEach(function (product, idx) {
         addProduct(productContainer, idx, product);
     });
-    productContainer.addEventListener("change", handleProductSelection);
 
+    productContainer.addEventListener("change", handleProductSelection);
     document.querySelector("form").addEventListener("input", computeTotal);
 });
 
