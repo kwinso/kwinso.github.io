@@ -1,7 +1,7 @@
 const apiUrl = "https://formcarry.com/s/Ycb60_rhNHC";
 const headers = {
-    "Content-Type": "application/json",
     Accept: "application/json",
+    "Content-Type": "application/json"
 };
 
 function updateHistory() {
@@ -32,11 +32,12 @@ function submitForm(event) {
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", apiUrl);
-    for (const key in headers) {
-		xhr.setRequestHeader(key, headers[key]);
-    }
+    Object.keys(headers).forEach(function (key) {
+        xhr.setRequestHeader(key, headers[key]);
+    });
     const formData = {};
-    const inputFields = document.querySelectorAll(".form-control:not(.form-label)");
+    const inputFields = document
+        .querySelectorAll(".form-control:not(.form-label)");
     inputFields.forEach(function (input) {
         formData[input.name] = input.value;
     });
